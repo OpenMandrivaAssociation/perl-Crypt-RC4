@@ -1,15 +1,13 @@
 %define upstream_name    Crypt-RC4
-%define upstream_version 2.02
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	6
+Version:	2.02
+Release:	7
 
 Summary:	Crypt-RC4 module for perl 
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/Crypt-RC4
-Source0:	https://cpan.metacpan.org/authors/id/S/SI/SIFUKURT/Crypt-RC4-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/S/SI/SIFUKURT/Crypt-RC4-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -19,7 +17,7 @@ BuildArch:	noarch
 This module provides a simple implementation of the RC4 algorithm.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -42,9 +40,7 @@ make test
 
 * Wed Jul 29 2009 Jérôme Quelin <jquelin@mandriva.org> 2.20.0-1mdv2011.0
 + Revision: 403037
-- rebuild using %%perl_convert_version
-
-* Wed Jul 30 2008 Thierry Vignaud <tv@mandriva.org> 2.02-3mdv2009.0
+- rebuild using %2.02 Wed Jul 30 2008 Thierry Vignaud <tv@mandriva.org> 2.02-3mdv2009.0
 + Revision: 256336
 - rebuild
 
