@@ -2,7 +2,7 @@
 %define upstream_version 2.02
 Name:		perl-%{upstream_name}
 Version:	2.02
-Release:	2
+Release:	3
 
 Summary:	Crypt-RC4 module for perl 
 License:	GPL+ or Artistic
@@ -27,6 +27,9 @@ make test || :
 
 %install
 %makeinstall_std
+
+%check
+make test || :
 
 %files
 %doc Changes
